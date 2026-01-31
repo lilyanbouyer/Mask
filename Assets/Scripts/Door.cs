@@ -8,7 +8,7 @@ public class Door : MonoBehaviour
     public Vector3 OpenRotation = new Vector3(0f, 90.0f, 0f);
     public Vector3 CloseRotation = Vector3.zero;
     public float smoothSpeed = 2f;
-    public Inventory inventory;
+    public GameObject neededKey = null;
     
     [Header("Invert Axes")]
     [Tooltip("Invert the opening direction on X axis relative to CloseRotation")]
@@ -25,13 +25,17 @@ public class Door : MonoBehaviour
     {
     }
 
-    public bool TryOpen()
-    {
-        if (inventory != null && inventory.hasFirstKey()){
-            isOpening = !isOpening;
-            return true;
+    public bool TryOpen(GameObject objectUsed){
+        if (neededKey != null){
+            if (objectUsed == neededKey){
+                isOpening = !isOpening;
+                return true;
+            }
+            else{
+                return false;
+            }
         }
-        else {
+        else{
             return false;
         }
     }

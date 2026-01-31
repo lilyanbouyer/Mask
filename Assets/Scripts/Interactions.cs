@@ -12,7 +12,6 @@ public class Interactions : MonoBehaviour
     private bool interactPressed = false;
     public NewMonoBehaviourScript movementsScript;
     public Transform playerHand;
-    public Inventory inventory;
     private GameObject currentItem = null;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -50,15 +49,19 @@ public class Interactions : MonoBehaviour
 
     private void ControllerColliderHit(RaycastHit hit)
     {
-        if (hit.transform.gameObject.CompareTag("Pickup"))    
-            //PickupItem(hit);
-            LootItem(hit);
-        else if (hit.transform.CompareTag("Door"))
-        {
+        if (hit.transform.gameObject.CompareTag("Pickup")) {   
+            PickupItem(hit);
+        }
+        else if (hit.transform.CompareTag("Door")){
+            if (currentItem == null){
+                return;
+            }
             Door door = hit.transform.GetComponent<Door>();
             if (door != null)
             {
-                door.TryOpen();
+                if(door.TryOpen(currentItem)){
+                    UseItem();
+                }
             }
         }
     }
@@ -70,20 +73,14 @@ public class Interactions : MonoBehaviour
         currentItem.transform.SetParent(playerHand);
         currentItem.transform.localPosition = Vector3.zero;
         currentItem.transform.localRotation = Quaternion.Euler(0, 180, 0);
-        currentItem.GetComponent<Rigidbody>().isKinematic = true;
-        currentItem.GetComponent<Rigidbody>().useGravity = true;
-        if (currentItem.GetComponent<Collider>() != null)
+        //currentItem.GetComponent<Rigidbody>().isKinematic = true;
+        //currentItem.GetComponent<Rigidbody>().useGravity = true;
+        if (currentItem.GetComponent<Collider>() != null){
             currentItem.GetComponent<Collider>().enabled = false;
+        }
     }
 
-    public void LootItem(RaycastHit hit){
-        GameObject targetItem = hit.transform.gameObject;
-        if (inventory != null ) {
-            inventory.unlockFirstKey();
-            Destroy(targetItem);
-        }
-        else{
-            Debug.LogError("No Inventory Assign to Interaction Component");
-        }
+    public void UseItem() {
+        Destroy(currentItem);
     }
 }

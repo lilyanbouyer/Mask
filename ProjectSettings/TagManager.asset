@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Pickup
   - Door
-  - FirstKey
+  - LootItem
   layers:
   - Default
   - TransparentFX
