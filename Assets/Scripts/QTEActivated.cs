@@ -10,7 +10,7 @@ public class QTEActivated : MonoBehaviour{
     public Slider slider;
     public Image greenZone;
     private float CurrentValue;
-    private float sliderSpeed = 1;
+    private float sliderSpeed = 0.7f;
     private float time;
     //private System.Random rnd = new System.Random();
     
@@ -23,11 +23,9 @@ public class QTEActivated : MonoBehaviour{
         SliderBackAndForth();
         if (Keyboard.current[interactKey].wasPressedThisFrame){
             if (IsInGreenZone()){
-                Debug.Log("QTE success!");
                 CompleteQTE();
             }
             else{
-                Debug.Log("QTE failed!");
                 ResetQTE();
             }
         }
