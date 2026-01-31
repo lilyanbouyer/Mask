@@ -11,7 +11,6 @@ public class QTEActivated : MonoBehaviour{
     public Image greenZone;
     private float CurrentValue;
     private float sliderSpeed = 1;
-    private bool movingRight = true;
     private float time;
     //private System.Random rnd = new System.Random();
     

@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(AudioSource))]
 public class Simon : MonoBehaviour
 {
     [Header("Game Settings")]
@@ -21,8 +22,13 @@ public class Simon : MonoBehaviour
 
     private System.Random rnd = new System.Random();
 
+    
+    AudioSource audioData;
+
     void Start()
     {
+        audioData = GetComponent<AudioSource>();
+        Debug.Log("started");
         GenerateSequence();
     }
 
@@ -107,5 +113,8 @@ public class Simon : MonoBehaviour
     private void ToggleLight(int lightId, bool state)
     {
         LightsList[lightId].intensity = state ? LightIntensity : 0f;
+        if (state){
+            audioData.Play(0);
+        }
     }
 }
