@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 319a1befe516175418c876e3edb55093
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      internalID: -203655887218126122
+      firstFrame: 0
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: HumanBody:Hips
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:LeftUpLeg
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:LeftUpLeg/HumanBody:LeftLeg
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:LeftUpLeg/HumanBody:LeftLeg/HumanBody:LeftFoot
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:LeftUpLeg/HumanBody:LeftLeg/HumanBody:LeftFoot/HumanBody:LeftToeBase
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:LeftUpLeg/HumanBody:LeftLeg/HumanBody:LeftFoot/HumanBody:LeftToeBase/HumanBody:LeftToe_End
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:RightUpLeg
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:RightUpLeg/HumanBody:RightLeg
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:RightUpLeg/HumanBody:RightLeg/HumanBody:RightFoot
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:RightUpLeg/HumanBody:RightLeg/HumanBody:RightFoot/HumanBody:RightToeBase
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:RightUpLeg/HumanBody:RightLeg/HumanBody:RightFoot/HumanBody:RightToeBase/HumanBody:RightToe_End
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandIndex1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandIndex1/HumanBody:LeftHandIndex2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandIndex1/HumanBody:LeftHandIndex2/HumanBody:LeftHandIndex3
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandIndex1/HumanBody:LeftHandIndex2/HumanBody:LeftHandIndex3/HumanBody:LeftHandIndex4
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandMiddle1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandMiddle1/HumanBody:LeftHandMiddle2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandMiddle1/HumanBody:LeftHandMiddle2/HumanBody:LeftHandMiddle3
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandMiddle1/HumanBody:LeftHandMiddle2/HumanBody:LeftHandMiddle3/HumanBody:LeftHandMiddle4
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandPinky1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandPinky1/HumanBody:LeftHandPinky2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandPinky1/HumanBody:LeftHandPinky2/HumanBody:LeftHandPinky3
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandPinky1/HumanBody:LeftHandPinky2/HumanBody:LeftHandPinky3/HumanBody:LeftHandPinky4
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandRing1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandRing1/HumanBody:LeftHandRing2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandRing1/HumanBody:LeftHandRing2/HumanBody:LeftHandRing3
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandRing1/HumanBody:LeftHandRing2/HumanBody:LeftHandRing3/HumanBody:LeftHandRing4
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandThumb1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandThumb1/HumanBody:LeftHandThumb2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandThumb1/HumanBody:LeftHandThumb2/HumanBody:LeftHandThumb3
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:LeftShoulder/HumanBody:LeftArm/HumanBody:LeftForeArm/HumanBody:LeftHand/HumanBody:LeftHandThumb1/HumanBody:LeftHandThumb2/HumanBody:LeftHandThumb3/HumanBody:LeftHandThumb4
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:Neck
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:Neck/HumanBody:Head
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:Neck/HumanBody:Head/HumanBody:HeadTop_End
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandIndex1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandIndex1/HumanBody:RightHandIndex2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandIndex1/HumanBody:RightHandIndex2/HumanBody:RightHandIndex3
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandIndex1/HumanBody:RightHandIndex2/HumanBody:RightHandIndex3/HumanBody:RightHandIndex4
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandMiddle1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandMiddle1/HumanBody:RightHandMiddle2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandMiddle1/HumanBody:RightHandMiddle2/HumanBody:RightHandMiddle3
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandMiddle1/HumanBody:RightHandMiddle2/HumanBody:RightHandMiddle3/HumanBody:RightHandMiddle4
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandPinky1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandPinky1/HumanBody:RightHandPinky2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandPinky1/HumanBody:RightHandPinky2/HumanBody:RightHandPinky3
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandPinky1/HumanBody:RightHandPinky2/HumanBody:RightHandPinky3/HumanBody:RightHandPinky4
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandRing1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandRing1/HumanBody:RightHandRing2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandRing1/HumanBody:RightHandRing2/HumanBody:RightHandRing3
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandRing1/HumanBody:RightHandRing2/HumanBody:RightHandRing3/HumanBody:RightHandRing4
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandThumb1
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandThumb1/HumanBody:RightHandThumb2
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandThumb1/HumanBody:RightHandThumb2/HumanBody:RightHandThumb3
+        weight: 1
+      - path: HumanBody:Hips/HumanBody:Spine/HumanBody:Spine1/HumanBody:Spine2/HumanBody:RightShoulder/HumanBody:RightArm/HumanBody:RightForeArm/HumanBody:RightHand/HumanBody:RightHandThumb1/HumanBody:RightHandThumb2/HumanBody:RightHandThumb3/HumanBody:RightHandThumb4
+        weight: 1
+      - path: HumanBody:humanBody
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
