@@ -9,10 +9,13 @@ public class Interactions : MonoBehaviour
     // Nouveau Input System
     public InputActionAsset actionsAsset;
     private InputAction interactAction;
+    private InputAction maskAction;
     private bool interactPressed = false;
+    private bool maskPressed = false;
     public NewMonoBehaviourScript movementsScript;
     public Transform playerHand;
     private GameObject currentItem = null;
+    public sanite saniteScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,9 +27,14 @@ public class Interactions : MonoBehaviour
             return;
         }
         interactAction = actionsAsset.FindAction("Interact");
+        maskAction = actionsAsset.FindAction("Mask");
         if (interactAction != null)
         {
             interactAction.Enable();
+        }
+        if (maskAction != null)
+        {
+            maskAction.Enable();
         }
     }
 
@@ -44,6 +52,16 @@ public class Interactions : MonoBehaviour
         }
         else {
             interactPressed = false;
+        }
+
+        if (maskAction != null && maskAction.IsPressed()) {
+            if (!maskPressed) {
+                maskPressed = true;
+                saniteScript.IteractMask();
+            }
+        }
+        else {
+            maskPressed = false;
         }
     }
 

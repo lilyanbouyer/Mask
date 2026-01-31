@@ -18,25 +18,30 @@ public class sanite : MonoBehaviour
         StartCoroutine(IncreaseSanite());
     }
 
-    IEnumerator IncreaseSanite()
+    private IEnumerator IncreaseSanite()
     {
         while (true)
         {
             yield return new WaitForSeconds(Interval);
             if (AsMask) {
-                SaniteLevel++;
+                yield return new WaitForSeconds(Interval);
+                SaniteLevel += 2;
             }
             else if (SaniteLevel > 0) {
+                yield return new WaitForSeconds(Interval * 4);
                 SaniteLevel -= 2;
             }
             if (SaniteLevel >= Maxsanite) {
                 maxSanite();
             }
             Debug.Log("Sanite Level: " + SaniteLevel);
+            if (SaniteLevel < 0) {
+                SaniteLevel = 0;
+            }
         }
     }
 
-    void IteractMask()
+    public void IteractMask()
     {
         AsMask = !AsMask;
         if (AsMask) {
@@ -46,7 +51,7 @@ public class sanite : MonoBehaviour
             embiance.SetNormalEmbient();
         }
     }
-    void maxSanite()
+    private void maxSanite()
     {
         IteractMask();
     }
