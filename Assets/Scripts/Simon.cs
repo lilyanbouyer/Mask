@@ -24,7 +24,6 @@ public class Simon : MonoBehaviour
     void Start()
     {
         GenerateSequence();
-        StartCoroutine(ShowSequence());
     }
 
     private void GenerateSequence()
@@ -37,24 +36,32 @@ public class Simon : MonoBehaviour
         {
             CurrentSequence.Add(rnd.Next(0, 4)); // 0 to 3
         }
+        StartCoroutine(ShowSequence());
     }
 
     public bool CheckInput(int value)
     {
         InputNumber++;
-
+        //Debug.Log(InputNumber);
+        //Debug.Log(CurrentSequence);
+        StartCoroutine(ShowLight(value));
+        
+        
         if (CurrentSequence[InputNumber] == value)
         {
             if (InputNumber == CurrentSequence.Count - 1)
             {
+                if (Lvl == 4){
+                    Victory();
+                    return true;
+                }
                 InputNumber = -1;
+                Lvl++;
                 GenerateSequence();
-                StartCoroutine(ShowSequence());
             }
             return true;
         }
-        else
-        {
+        else {
             ResetGame();
             return false;
         }
@@ -62,8 +69,11 @@ public class Simon : MonoBehaviour
 
     private void ResetGame()
     {
+        Debug.Log("You lose");
         CurrentSequence.Clear();
         InputNumber = -1;
+        Lvl = 1;
+        GenerateSequence();
     }
 
     private IEnumerator ShowSequence()
@@ -78,6 +88,20 @@ public class Simon : MonoBehaviour
             ToggleLight(lightId, false);
             yield return new WaitForSeconds(BetweenShowDelay);
         }
+    }
+
+    private IEnumerator ShowLight(int lightId){
+        ToggleLight(lightId, true);
+        yield return new WaitForSeconds(ShowDelay);
+        ToggleLight(lightId, false);
+
+    }
+
+    private void Victory(){
+        ToggleLight(0, true);
+        ToggleLight(1, true);
+        ToggleLight(2, true);
+        ToggleLight(3, true);
     }
 
     private void ToggleLight(int lightId, bool state)
