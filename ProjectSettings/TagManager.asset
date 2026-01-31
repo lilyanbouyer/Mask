@@ -11,6 +11,9 @@ TagManager:
 =======
   - FirstKey
   - Masked
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   layers:
   - Default
