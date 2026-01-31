@@ -6,7 +6,7 @@ public class QTEActivated : MonoBehaviour{
     public bool done { get; private set; } = false;
     public GameObject qteUI;
     public Key interactKey = Key.E;
-    private bool active = true;
+    private bool active = false;
     public Slider slider;
     public Image greenZone;
     private float CurrentValue;
@@ -86,5 +86,9 @@ public class QTEActivated : MonoBehaviour{
         active = true;
         qteUI.SetActive(true);
         GenerateQTE();
+    }
+
+    public bool IsActive(){
+        return active;
     }
 }
