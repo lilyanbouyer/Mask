@@ -82,6 +82,9 @@ public class Interactions : MonoBehaviour
                 }
             }
         }
+        else if (hit.transform.CompareTag("Lever")) {
+            (hit.transform.GetComponent<LeverActivation>()).TryOpen();
+        }
     }
 
     public void PickupItem(RaycastHit hit)
