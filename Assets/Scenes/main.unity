@@ -420,13 +420,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d939e0ab25ee6034c994abea33ce6980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeverActivation
-  ActivatedRotation: {x: 90, y: 0, z: 0}
+  ActivatedRotation: {x: 180, y: 0, z: 0}
   BaseRotation: {x: 0, y: 0, z: 0}
   smoothSpeed: 2
   QTELinked: {fileID: 302710036}
-  invertX: 0
+  invertX: 1
   invertY: 0
   invertZ: 0
+--- !u!65 &335378872
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335378867}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.016596587, y: 0.029576544, z: 0.008425221}
+  m_Center: {x: 0.00000011920929, y: 0.0131720975, z: -0.00000011920929}
 --- !u!1 &336334686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: generator
       objectReference: {fileID: 0}
+    - target: {fileID: 2532816197131014825, guid: dd44fcb6a7260ff4e98cb82e3e95654f, type: 3}
+      propertyPath: m_TagString
+      value: Lever
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2264,6 +2289,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2532816197131014825, guid: dd44fcb6a7260ff4e98cb82e3e95654f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 335378871}
+    - targetCorrespondingSourceObject: {fileID: 2532816197131014825, guid: dd44fcb6a7260ff4e98cb82e3e95654f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 335378872}
   m_SourcePrefab: {fileID: 100100000, guid: dd44fcb6a7260ff4e98cb82e3e95654f, type: 3}
 --- !u!1 &1527526886
 GameObject:

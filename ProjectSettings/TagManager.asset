@@ -6,12 +6,10 @@ TagManager:
   tags:
   - Pickup
   - Door
-<<<<<<< Updated upstream
   - LootItem
-=======
-  - FirstKey
-  - Masked
->>>>>>> Stashed changes
+  - ExitCrawl
+  - EnterCrawl
+  - Lever
   layers:
   - Default
   - TransparentFX
