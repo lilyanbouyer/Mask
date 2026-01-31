@@ -24,12 +24,11 @@ public class sanite : MonoBehaviour
         {
             yield return new WaitForSeconds(Interval);
             if (AsMask) {
-                yield return new WaitForSeconds(Interval);
-                SaniteLevel += 2;
+                SaniteLevel += 1;
             }
             else if (SaniteLevel > 0) {
-                yield return new WaitForSeconds(Interval * 4);
-                SaniteLevel -= 2;
+                yield return new WaitForSeconds(Interval);
+                SaniteLevel -= 1;
             }
             if (SaniteLevel >= Maxsanite) {
                 maxSanite();
@@ -43,6 +42,15 @@ public class sanite : MonoBehaviour
 
     public void IteractMask()
     {
+        //shearch for all object with tag "Masked" and toggle their visibility
+        GameObject[] maskedObjects = GameObject.FindGameObjectsWithTag("Masked");
+        foreach (GameObject obj in maskedObjects) {
+            Renderer objRenderer = obj.GetComponent<Renderer>();
+            if (objRenderer != null)
+            {
+                objRenderer.enabled = !objRenderer.enabled;
+            }
+        }
         AsMask = !AsMask;
         if (AsMask) {
             embiance.SetMaskEmbient();

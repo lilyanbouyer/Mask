@@ -1130,7 +1130,7 @@ GameObject:
   - component: {fileID: 1521918996}
   m_Layer: 0
   m_Name: r
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1495,7 +1495,7 @@ GameObject:
   - component: {fileID: 2014764192}
   m_Layer: 0
   m_Name: f (1)
-  m_TagString: Untagged
+  m_TagString: Masked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
