@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class Interactions : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Interactions : MonoBehaviour
     private bool interactPressed = false;
     public NewMonoBehaviourScript movementsScript;
     public Transform playerHand;
+    public Inventory inventory;
     private GameObject currentItem = null;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -49,7 +51,16 @@ public class Interactions : MonoBehaviour
     private void ControllerColliderHit(RaycastHit hit)
     {
         if (hit.transform.gameObject.CompareTag("Pickup"))    
-            PickupItem(hit);
+            //PickupItem(hit);
+            LootItem(hit);
+        else if (hit.transform.CompareTag("Door"))
+        {
+            Door door = hit.transform.GetComponent<Door>();
+            if (door != null)
+            {
+                door.TryOpen();
+            }
+        }
     }
 
     public void PickupItem(RaycastHit hit)
@@ -63,5 +74,16 @@ public class Interactions : MonoBehaviour
         currentItem.GetComponent<Rigidbody>().useGravity = true;
         if (currentItem.GetComponent<Collider>() != null)
             currentItem.GetComponent<Collider>().enabled = false;
+    }
+
+    public void LootItem(RaycastHit hit){
+        GameObject targetItem = hit.transform.gameObject;
+        if (inventory != null ) {
+            inventory.unlockFirstKey();
+            Destroy(targetItem);
+        }
+        else{
+            Debug.LogError("No Inventory Assign to Interaction Component");
+        }
     }
 }
