@@ -10,6 +10,8 @@ TagManager:
   - ExitCrawl
   - EnterCrawl
   - Lever
+  - FirstKey
+  - Masked
   layers:
   - Default
   - TransparentFX
