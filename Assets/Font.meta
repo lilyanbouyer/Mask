@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Font.meta
 guid: a492c404d3a4c12449376179bd97d824
+========
+guid: fd0e041968dcb5144abb0ff47356fce0
+>>>>>>>> Stashed changes:Assets/Scenes/5/Exit.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
