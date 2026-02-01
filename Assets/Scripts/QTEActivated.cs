@@ -24,6 +24,7 @@ public class QTEActivated : MonoBehaviour{
         if (Keyboard.current[interactKey].wasPressedThisFrame){
             if (IsInGreenZone()){
                 CompleteQTE();
+                Debug.Log("Fish");
             }
             else{
                 ResetQTE();
@@ -57,10 +58,8 @@ public class QTEActivated : MonoBehaviour{
         return handleX >= greenMin && handleX <= greenMax;
     }
 
-
     private void GenerateQTE() {
         CurrentValue = Random.Range(0.0f, 1.0f);
-        Debug.Log(CurrentValue);
         RectTransform rt = slider.GetComponent<RectTransform>();
         float greenPos = (rt.rect.width-20) * CurrentValue - ((rt.rect.width-20)/2);
         RectTransform greenRT = greenZone.GetComponent<RectTransform>();

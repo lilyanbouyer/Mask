@@ -18,6 +18,7 @@ public class LeverActivation : MonoBehaviour
     private bool isOpening = false;
     private Quaternion targetRotation;
     private QTEActivated qteScript;
+    private bool InGame = false;
     
     void Start()
     {  
@@ -35,11 +36,17 @@ public class LeverActivation : MonoBehaviour
             return false;
         }
         
-        if (QTELinked != null && qteScript != null)
+        if (QTELinked != null && qteScript != null && !InGame)
         {
-            Debug.Log("Starting QTE");
-            qteScript.StartQTE();
-            return true;
+            if (!qteScript.IsActive()) {
+                Debug.Log("Starting QTE");
+                InGame = true;
+                qteScript.StartQTE();
+                return true;
+            }
+            else {
+                return false;
+            }
         }
         else
         {
@@ -68,6 +75,7 @@ public class LeverActivation : MonoBehaviour
     // New method to activate the lever
     public void ActivateLever()
     {
+        InGame = false;
         isOpening = true;
         Debug.Log("Lever activated!");
     }
