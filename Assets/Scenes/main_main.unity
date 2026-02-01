@@ -183,16 +183,44 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Key (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 40897302}
   m_SourcePrefab: {fileID: 100100000, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
 --- !u!1 &40897298 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
   m_PrefabInstance: {fileID: 40897297}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &40897302
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40897298}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.027513426, y: 0.0059516225, z: 0.091994256}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &55320323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1675,6 +1703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Door (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 676b9b59cc0e1b143a839dcc93931e01, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1728,8 +1760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b31fe38987f39438bfb369ee56119a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  OpenRotation: {x: 0, y: 90, z: 0}
-  CloseRotation: {x: 0, y: 0, z: 0}
+  OpenRotation: {x: 0, y: 0, z: 0}
+  CloseRotation: {x: 0, y: -90, z: 0}
   smoothSpeed: 2
   neededKey: {fileID: 1445479636}
   invertX: 0
@@ -1748,7 +1780,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 1839c71e83c3abc44b414476017a1aad, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2272,6 +2304,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Door
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 676b9b59cc0e1b143a839dcc93931e01, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2345,7 +2381,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 1839c71e83c3abc44b414476017a1aad, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4415,16 +4451,44 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Key
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1445479640}
   m_SourcePrefab: {fileID: 100100000, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
 --- !u!1 &1445479636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
   m_PrefabInstance: {fileID: 1445479635}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1445479640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445479636}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.027513428, y: 0.005951623, z: 0.09199426}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1455024435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b2102c520cc3ba64285e6562dd8375d2, type: 3}
@@ -5070,6 +5134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: generator
       objectReference: {fileID: 0}
+    - target: {fileID: 2532816197131014825, guid: dd44fcb6a7260ff4e98cb82e3e95654f, type: 3}
+      propertyPath: m_TagString
+      value: Lever
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5083,6 +5151,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2532816197131014825, guid: dd44fcb6a7260ff4e98cb82e3e95654f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1545415791}
+    - targetCorrespondingSourceObject: {fileID: 2532816197131014825, guid: dd44fcb6a7260ff4e98cb82e3e95654f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1545415797}
   m_SourcePrefab: {fileID: 100100000, guid: dd44fcb6a7260ff4e98cb82e3e95654f, type: 3}
 --- !u!1 &1545415788 stripped
 GameObject:
@@ -5152,11 +5223,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: b2693ba2b17afa243a1d1535944132b7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5238,6 +5309,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1545415797
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545415790}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.016596587, y: 0.029576542, z: 0.00842522}
+  m_Center: {x: 0, y: 0.013171977, z: -0.00000011920929}
 --- !u!1001 &1560339239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6099,16 +6191,44 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Key (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1822281146}
   m_SourcePrefab: {fileID: 100100000, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
 --- !u!1 &1822281142 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ccf103aa0fe48c40940cf77a2b951b7, type: 3}
   m_PrefabInstance: {fileID: 1822281141}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1822281146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822281142}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.027513428, y: 0.005951623, z: 0.09199426}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1839052945
 GameObject:
   m_ObjectHideFlags: 0
@@ -6706,6 +6826,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 676b9b59cc0e1b143a839dcc93931e01, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6759,8 +6883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b31fe38987f39438bfb369ee56119a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  OpenRotation: {x: 0, y: 90, z: 0}
-  CloseRotation: {x: 0, y: 0, z: 0}
+  OpenRotation: {x: 0, y: 0, z: 0}
+  CloseRotation: {x: 0, y: -90, z: 0}
   smoothSpeed: 2
   neededKey: {fileID: 40897298}
   invertX: 0
@@ -6779,7 +6903,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 1839c71e83c3abc44b414476017a1aad, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
