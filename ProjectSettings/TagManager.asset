@@ -7,6 +7,11 @@ TagManager:
   - Pickup
   - Door
   - LootItem
+  - ExitCrawl
+  - EnterCrawl
+  - Lever
+  - FirstKey
+  - Masked
   layers:
   - Default
   - TransparentFX

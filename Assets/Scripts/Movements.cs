@@ -17,6 +17,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public bool isClimbing = false;
     public bool CanGetUp = true;
     public bool isdialogueActive = false;
+    public GameObject QTELinked;
+    private QTEActivated qteScript;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
@@ -34,6 +36,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     void Start()
     {
+        if (QTELinked != null)
+        {
+            qteScript = QTELinked.transform.GetComponent<QTEActivated>();
+        }
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -52,7 +58,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Update()
     {
         // If dialogue is active, stop movement and unlock cursor
-        if (isdialogueActive)
+        if (isdialogueActive || qteScript.IsActive())
         {
             canMove = false;
             // disable input actions so they don't trigger while in dialogue
