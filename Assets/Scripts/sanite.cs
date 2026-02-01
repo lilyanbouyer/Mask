@@ -56,14 +56,17 @@ public class sanite : MonoBehaviour
                 }
             }
         }
-        AsMask = !AsMask;
-        if (AsMask) {
-            embiance.SetMaskEmbient();
-        }
-        else {
-            embiance.SetNormalEmbient();
+        if (AsMask || SaniteLevel == 0) {
+            AsMask = !AsMask;
+            if (AsMask) {
+                embiance.SetMaskEmbient();
+            }
+            else {
+                embiance.SetNormalEmbient();
+            }
         }
     }
+
     private void maxSanite()
     {
         IteractMask();
