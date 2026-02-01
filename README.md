@@ -1,1 +1,1 @@
-to lunch the game use the executable unity
+to launch the game use the executable unity
