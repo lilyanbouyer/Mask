@@ -27,7 +27,6 @@ public class Simon : MonoBehaviour
     
     public AudioSource audioData;
     public List<AudioClip> audios = new List<AudioClip> {}; // 4 audio
-    public AudioClip audioData4;
     private bool sequenceOn;
     private bool activated = false;
     private bool isProcessingInput = false;

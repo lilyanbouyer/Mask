@@ -1,4 +1,9 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+
+[RequireComponent(typeof(AudioSource))]
 public class LeverActivation : MonoBehaviour
 {
     [Header("Lever Settings")]
@@ -20,9 +25,12 @@ public class LeverActivation : MonoBehaviour
     private Quaternion targetRotation;
     private QTEActivated qteScript;
     private bool InGame = false;
-    
+    public AudioSource audioData;
+    public List<AudioClip> audios = new List<AudioClip> {};
+
     void Start()
-    {  
+    {
+        audioData = GetComponent<AudioSource>();
         if (QTELinked != null)
         {
             qteScript = QTELinked.transform.GetComponent<QTEActivated>();
@@ -71,12 +79,27 @@ public class LeverActivation : MonoBehaviour
             smoothSpeed * Time.deltaTime
         );
     }
-    
-    // New method to activate the lever
-    public void ActivateLever()
+
+    public async void ActivateLever()
     {
         InGame = false;
         isOpening = true;
+    
+        audioData.PlayOneShot(audios[0]);
+        await Task.Delay(1000);
+        audioData.PlayOneShot(audios[1]);
+    
+        if (audios[1] != null)
+        {
+            await Task.Delay((int)(audios[1].length * 1000));
+        }
+    
+        if (audios[2] != null)
+        {
+            audioData.clip = audios[2];
+            audioData.loop = true;
+            audioData.Play();
+        }
     }
     
     public bool IsOpen()
