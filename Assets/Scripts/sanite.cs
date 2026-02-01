@@ -46,9 +46,14 @@ public class sanite : MonoBehaviour
         GameObject[] maskedObjects = GameObject.FindGameObjectsWithTag("Masked");
         foreach (GameObject obj in maskedObjects) {
             Renderer objRenderer = obj.GetComponent<Renderer>();
-            if (objRenderer != null)
-            {
+            if (objRenderer != null) {
                 objRenderer.enabled = !objRenderer.enabled;
+            } else {
+                Light objLight = obj.GetComponent<Light>();
+                if (objLight != null)
+                {
+                    objLight.enabled = !objLight.enabled;
+                }
             }
         }
         AsMask = !AsMask;
