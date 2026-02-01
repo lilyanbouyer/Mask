@@ -25,10 +25,9 @@ public class Simon : MonoBehaviour
     [Header("Inactivity Settings")]
     public float InactivityTime = 5f; // Time before replaying sequence
     
-    AudioSource audioData1;
-    AudioSource audioData2;
-    AudioSource audioData3;
-    AudioSource audioData4;
+    public AudioSource audioData;
+    public List<AudioClip> audios = new List<AudioClip> {}; // 4 audio
+    public AudioClip audioData4;
     private bool sequenceOn;
     private bool activated = false;
     private bool isProcessingInput = false;
@@ -37,17 +36,14 @@ public class Simon : MonoBehaviour
     
     void Start()
     {
-        audioData1 = GetComponent<AudioSource>();
-        audioData2 = GetComponent<AudioSource>();
-        audioData3 = GetComponent<AudioSource>();
-        audioData4 = GetComponent<AudioSource>();
+        audioData = GetComponent<AudioSource>();
         lastInputTime = Time.time;
     }
     
     void Update()
     {
         // Check for inactivity and replay sequence if needed
-        if (activated && !sequenceOn && !isProcessingInput && InputNumber >= 0)
+        if (activated && !sequenceOn && !isProcessingInput) // && InputNumber >= 0)
         {
             if (Time.time - lastInputTime > InactivityTime)
             {
@@ -234,9 +230,9 @@ public class Simon : MonoBehaviour
         }
         
         LightsList[lightId].intensity = state ? LightIntensity : 0f;
-        if (state)
+        if (state && activated)
         {
-            audioData.Play(0);
+            audioData.PlayOneShot(audios[lightId]);
         }
     }
 }

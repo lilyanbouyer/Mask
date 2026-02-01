@@ -196,6 +196,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 30153642144004220, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2802045800410575042, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.377
@@ -240,10 +244,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: simon
       objectReference: {fileID: 0}
+    - target: {fileID: 3589810159507836359, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589810159507836359, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589810159507836359, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4790282834350305287, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1023323501}
+    - target: {fileID: 4790282834350305287, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: audios.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790282834350305287, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: 'audios.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d4edfe5431f1b04eb76c4c8f2583744, type: 3}
+    - target: {fileID: 4790282834350305287, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: 'audios.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3016a0fb3750812419e18dbd2bd79b95, type: 3}
+    - target: {fileID: 4790282834350305287, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: 'audios.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ed8c3fadd5f253a4aaef0ae3ee7ac60b, type: 3}
+    - target: {fileID: 4790282834350305287, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: 'audios.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ce872110bbe12514bb15ed212ae6e21d, type: 3}
+    - target: {fileID: 9214304892143323665, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
