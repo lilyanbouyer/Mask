@@ -25,7 +25,10 @@ public class Simon : MonoBehaviour
     [Header("Inactivity Settings")]
     public float InactivityTime = 5f; // Time before replaying sequence
     
-    AudioSource audioData;
+    AudioSource audioData1;
+    AudioSource audioData2;
+    AudioSource audioData3;
+    AudioSource audioData4;
     private bool sequenceOn;
     private bool activated = false;
     private bool isProcessingInput = false;
@@ -34,9 +37,11 @@ public class Simon : MonoBehaviour
     
     void Start()
     {
-        audioData = GetComponent<AudioSource>();
+        audioData1 = GetComponent<AudioSource>();
+        audioData2 = GetComponent<AudioSource>();
+        audioData3 = GetComponent<AudioSource>();
+        audioData4 = GetComponent<AudioSource>();
         lastInputTime = Time.time;
-        Debug.Log("Simon started - waiting for activation");
     }
     
     void Update()
@@ -46,7 +51,6 @@ public class Simon : MonoBehaviour
         {
             if (Time.time - lastInputTime > InactivityTime)
             {
-                Debug.Log("Inactivité détectée - rejouer la séquence");
                 ReplaySequence();
             }
         }
@@ -57,12 +61,10 @@ public class Simon : MonoBehaviour
     {
         if (activated)
         {
-            Debug.Log("Simon already activated");
             return;
         }
         
         activated = true;
-        Debug.Log("Simon activated!");
         GenerateSequenceAsync();
     }
     
@@ -72,7 +74,6 @@ public class Simon : MonoBehaviour
         activated = false;
         sequenceOn = false;
         isProcessingInput = false;
-        Debug.Log("Simon deactivated");
     }
 
     private async void GenerateSequenceAsync()
@@ -91,7 +92,6 @@ public class Simon : MonoBehaviour
     {
         if (!activated || sequenceOn) return;
         
-        Debug.Log("Rejouer la séquence...");
         InputNumber = -1; // Reset input counter
         await ShowSequence();
     }
@@ -100,7 +100,6 @@ public class Simon : MonoBehaviour
     {
         if (!activated)
         {
-            Debug.Log("Simon n'est pas encore activé!");
             return;
         }
         
@@ -119,14 +118,12 @@ public class Simon : MonoBehaviour
     {
         if (!activated)
         {
-            Debug.Log("Simon n'est pas activé!");
             return;
         }
         
         // Empêcher les clics pendant la séquence ou pendant le traitement d'un input
         if (sequenceOn || isProcessingInput) 
         { 
-            Debug.Log("Attendez!");
             return; 
         }
         
@@ -137,7 +134,6 @@ public class Simon : MonoBehaviour
         // Vérifier que l'index est valide AVANT d'accéder à la liste
         if (InputNumber >= CurrentSequence.Count)
         {
-            Debug.LogError($"InputNumber ({InputNumber}) est hors limite! CurrentSequence.Count = {CurrentSequence.Count}");
             isProcessingInput = false;
             return;
         }
@@ -148,7 +144,6 @@ public class Simon : MonoBehaviour
         // Vérification de la réponse
         if (CurrentSequence[InputNumber] == value)
         {
-            Debug.Log("Correct!");
             
             // Vérifier si c'est le dernier de la séquence
             if (InputNumber == CurrentSequence.Count - 1)
@@ -170,7 +165,6 @@ public class Simon : MonoBehaviour
         }
         else
         {
-            Debug.Log("Faux!");
             isProcessingInput = false;
             ResetGame();
             return;
@@ -181,7 +175,6 @@ public class Simon : MonoBehaviour
     
     private void ResetGame()
     {
-        Debug.Log("Vous avez perdu");
         CurrentSequence.Clear();
         InputNumber = -1;
         Lvl = 1;
@@ -213,7 +206,6 @@ public class Simon : MonoBehaviour
         
         sequenceOn = false;
         lastInputTime = Time.time; // Start inactivity timer
-        Debug.Log($"Séquence terminée. Attendez {CurrentSequence.Count} inputs.");
     }
     
     private async Task ShowLight(int lightId)
@@ -231,7 +223,6 @@ public class Simon : MonoBehaviour
         ToggleLight(1, true);
         ToggleLight(2, true);
         ToggleLight(3, true);
-        Debug.Log("🎉 VICTOIRE! 🎉");
     }
     
     private void ToggleLight(int lightId, bool state)

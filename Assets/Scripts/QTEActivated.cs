@@ -24,7 +24,6 @@ public class QTEActivated : MonoBehaviour{
         if (Keyboard.current[interactKey].wasPressedThisFrame){
             if (IsInGreenZone()){
                 CompleteQTE();
-                Debug.Log("Fish");
             }
             else{
                 ResetQTE();

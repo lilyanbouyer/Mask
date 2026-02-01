@@ -33,14 +33,12 @@ public class LeverActivation : MonoBehaviour
     {
         if (isOpening)
         {
-            Debug.Log("Lever already activated!");
             return false;
         }
         
         if (QTELinked != null && qteScript != null && !InGame)
         {
             if (!qteScript.IsActive()) {
-                Debug.Log("Starting QTE");
                 InGame = true;
                 qteScript.StartQTE();
                 return true;
@@ -79,7 +77,6 @@ public class LeverActivation : MonoBehaviour
     {
         InGame = false;
         isOpening = true;
-        Debug.Log("Lever activated!");
     }
     
     public bool IsOpen()
