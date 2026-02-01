@@ -785,7 +785,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -1041,6 +1041,10 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4790282834350305287, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 709748951}
     - target: {fileID: 4790282834350305287, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
       propertyPath: playerCamera
       value: 

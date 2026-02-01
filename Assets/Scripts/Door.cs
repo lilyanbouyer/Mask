@@ -58,6 +58,10 @@ public class Door : MonoBehaviour
         );
     }
 
+    public void ForceOpen(){
+        isOpening = !isOpening;
+    }
+
     public bool IsOpen()
     {
         return isOpening;
