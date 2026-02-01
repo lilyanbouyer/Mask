@@ -256,6 +256,14 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3589810159507836359, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589810159507836359, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4790282834350305287, guid: 834b64a11dbd81949aff4137f9ebcd07, type: 3}
       propertyPath: playerCamera
       value: 

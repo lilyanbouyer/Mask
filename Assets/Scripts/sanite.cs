@@ -12,6 +12,9 @@ public class sanite : MonoBehaviour
     public int Maxsanite = 40;
     public bool AsMask = false;
     public DayNightCycle embiance;
+    public AudioSource soundManager;
+    public AudioClip soundMaskOn;
+    public AudioClip soundScream;
 
     void Start()
     {
@@ -23,14 +26,17 @@ public class sanite : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Interval);
+            if (SaniteLevel >= Maxsanite -28 && AsMask && soundManager.isPlaying == false)
+            {
+                soundManager.PlayOneShot(soundMaskOn);
+            }
             if (AsMask) {
                 SaniteLevel += 1;
-            }
-            else if (SaniteLevel > 0) {
+            } else if (SaniteLevel > 0) {
                 yield return new WaitForSeconds(Interval);
                 SaniteLevel -= 1;
             }
-            if (SaniteLevel >= Maxsanite) {
+            if (SaniteLevel == Maxsanite && AsMask) {
                 maxSanite();
             }
             Debug.Log("Sanite Level: " + SaniteLevel);
@@ -63,12 +69,18 @@ public class sanite : MonoBehaviour
             }
             else {
                 embiance.SetNormalEmbient();
+                soundManager.Stop();
             }
         }
     }
 
     private void maxSanite()
     {
-        IteractMask();
+        soundManager.Stop();
+        if (soundScream != null && soundManager.isPlaying == false)
+        {
+            soundManager.PlayOneShot(soundScream);
+        }
+        //IteractMask();
     }
 }
