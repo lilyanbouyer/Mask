@@ -10,7 +10,6 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        Debug.Log("Press Start");
         SceneManager.LoadScene(sceneToLoad, LoadSceneMode.Single);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
@@ -18,14 +17,12 @@ public class MainMenu : MonoBehaviour
     }
 
     public void OpenOptions()
-    {
-        Debug.Log("Options clicked");
+    {;
         // SceneManager.LoadScene("OptionsScene");
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quit Game");
         Application.Quit();
         
         // For testing in editor:

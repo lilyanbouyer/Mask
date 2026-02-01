@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 [RequireComponent(typeof(AudioSource))]
@@ -21,20 +22,63 @@ public class Simon : MonoBehaviour
     [Header("Camera Settings")]
     public Camera playerCamera;
     
+    [Header("Inactivity Settings")]
+    public float InactivityTime = 5f; // Time before replaying sequence
+    
     AudioSource audioData;
     private bool sequenceOn;
-    private bool isProcessingInput = false; // Empêcher les clics multiples
+    private bool activated = false;
+    private bool isProcessingInput = false;
+    private float lastInputTime;
+    private CancellationTokenSource inactivityCancellation;
     
     void Start()
     {
         audioData = GetComponent<AudioSource>();
-        Debug.Log("started");
+        lastInputTime = Time.time;
+        Debug.Log("Simon started - waiting for activation");
+    }
+    
+    void Update()
+    {
+        // Check for inactivity and replay sequence if needed
+        if (activated && !sequenceOn && !isProcessingInput && InputNumber >= 0)
+        {
+            if (Time.time - lastInputTime > InactivityTime)
+            {
+                Debug.Log("Inactivité détectée - rejouer la séquence");
+                ReplaySequence();
+            }
+        }
+    }
+    
+    // Call this method to activate the Simon game
+    public void Activate()
+    {
+        if (activated)
+        {
+            Debug.Log("Simon already activated");
+            return;
+        }
+        
+        activated = true;
+        Debug.Log("Simon activated!");
         GenerateSequenceAsync();
     }
     
+    // Call this to deactivate
+    public void Deactivate()
+    {
+        activated = false;
+        sequenceOn = false;
+        isProcessingInput = false;
+        Debug.Log("Simon deactivated");
+    }
+
     private async void GenerateSequenceAsync()
     {
-        if (Lvl <= 0) return;
+        if (!activated || Lvl <= 0) return;
+        
         int sequenceSize = LvlLength[Lvl - 1];
         while (CurrentSequence.Count < sequenceSize)
         {
@@ -43,8 +87,23 @@ public class Simon : MonoBehaviour
         await ShowSequence();
     }
     
+    private async void ReplaySequence()
+    {
+        if (!activated || sequenceOn) return;
+        
+        Debug.Log("Rejouer la séquence...");
+        InputNumber = -1; // Reset input counter
+        await ShowSequence();
+    }
+    
     public void CheckRayCast(int buttonId, Vector2 mousePos)
     {
+        if (!activated)
+        {
+            Debug.Log("Simon n'est pas encore activé!");
+            return;
+        }
+        
         Ray ray = playerCamera.ScreenPointToRay(mousePos);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
@@ -58,6 +117,12 @@ public class Simon : MonoBehaviour
     
     private async void CheckInputAsync(int value)
     {
+        if (!activated)
+        {
+            Debug.Log("Simon n'est pas activé!");
+            return;
+        }
+        
         // Empêcher les clics pendant la séquence ou pendant le traitement d'un input
         if (sequenceOn || isProcessingInput) 
         { 
@@ -67,6 +132,7 @@ public class Simon : MonoBehaviour
         
         isProcessingInput = true;
         InputNumber++;
+        lastInputTime = Time.time; // Update last input time
         
         // Vérifier que l'index est valide AVANT d'accéder à la liste
         if (InputNumber >= CurrentSequence.Count)
@@ -120,17 +186,24 @@ public class Simon : MonoBehaviour
         InputNumber = -1;
         Lvl = 1;
         isProcessingInput = false;
+        lastInputTime = Time.time;
         GenerateSequenceAsync();
     }
     
     private async Task ShowSequence()
     {
+        if (!activated) return;
+        
         sequenceOn = true;
         InputNumber = -1; // Réinitialiser avant de montrer la séquence
+        lastInputTime = Time.time; // Reset inactivity timer
+        
         await Task.Delay((int)(BetweenShowDelay * 1000));
         
         for (int i = 0; i < CurrentSequence.Count; i++)
         {
+            if (!activated) break; // Stop if deactivated
+            
             int lightId = CurrentSequence[i];
             ToggleLight(lightId, true);
             await Task.Delay((int)(ShowDelay * 1000));
@@ -139,6 +212,7 @@ public class Simon : MonoBehaviour
         }
         
         sequenceOn = false;
+        lastInputTime = Time.time; // Start inactivity timer
         Debug.Log($"Séquence terminée. Attendez {CurrentSequence.Count} inputs.");
     }
     
@@ -152,6 +226,7 @@ public class Simon : MonoBehaviour
     private void Victory()
     {
         sequenceOn = true; // Empêcher d'autres inputs
+        activated = false; // Désactiver le jeu
         ToggleLight(0, true);
         ToggleLight(1, true);
         ToggleLight(2, true);

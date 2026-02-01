@@ -6,6 +6,7 @@ public class LeverActivation : MonoBehaviour
     public Vector3 BaseRotation = Vector3.zero;
     public float smoothSpeed = 2f;
     public GameObject QTELinked;
+    public Simon simon;
     
     [Header("Invert Axes")]
     [Tooltip("Invert the opening direction on X axis relative to CloseRotation")]
@@ -60,6 +61,7 @@ public class LeverActivation : MonoBehaviour
         if (qteScript != null && qteScript.done && !isOpening)
         {
             ActivateLever();
+            simon.Activate();
         }
         
         Vector3 targetEuler = isOpening ? GetEffectiveOpenRotation() : BaseRotation;
