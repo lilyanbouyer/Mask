@@ -3,7 +3,37 @@ guid: dd44fcb6a7260ff4e98cb82e3e95654f
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: box_generator1
+    second: {fileID: 2100000, guid: bd3cad0ff7358a444bf419854fcc9d17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass_generator
+    second: {fileID: 2100000, guid: c9b54a22633f50f4ab2bb70b3c5b6884, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lever_generator
+    second: {fileID: 2100000, guid: 030d5a9af94a4b54297bcf787ac94d80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: outline
+    second: {fileID: 2100000, guid: 27b96ebb63d7c3649a279d848858be8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: support_lever_generator
+    second: {fileID: 2100000, guid: a913cebbea7fb2f4aa94320e4fe1b849, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: switch_generator
+    second: {fileID: 2100000, guid: 45521732d8f155c44be6a26d2c6fe241, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
