@@ -1,6 +1,7 @@
 using UnityEngine;
 
 // Component to attach to individual doors for custom settings
+[RequireComponent(typeof(AudioSource))]
 public class Door : MonoBehaviour
 {
     [Header("Door Settings")]
@@ -20,9 +21,11 @@ public class Door : MonoBehaviour
     
     private bool isOpening = false;
     private Quaternion targetRotation;
+    public AudioSource audioData;
 
     void Start()
     {
+        audioData = GetComponent<AudioSource>();
     }
 
     public bool TryOpen(GameObject objectUsed){
@@ -43,6 +46,9 @@ public class Door : MonoBehaviour
     public void Update()
     {
         Vector3 targetEuler = isOpening ? GetEffectiveOpenRotation() : CloseRotation;
+        if (isOpening){
+            audioData.Play(0);
+        }
         targetRotation = Quaternion.Euler(targetEuler);
         
         transform.localRotation = Quaternion.Slerp(

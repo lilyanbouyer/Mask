@@ -8,7 +8,7 @@ public class animscrypt : MonoBehaviour
     public string sceneToLoad;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    async Task Start()
+    private void Start()
     {
         StartCoroutine(LoadSceneAfterDelay());
     }
@@ -19,7 +19,7 @@ public class animscrypt : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneToLoad);
     }
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
