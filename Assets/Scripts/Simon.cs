@@ -32,6 +32,7 @@ public class Simon : MonoBehaviour
     private bool isProcessingInput = false;
     private float lastInputTime;
     private CancellationTokenSource inactivityCancellation;
+    public Door door;
     
     void Start()
     {
@@ -212,6 +213,7 @@ public class Simon : MonoBehaviour
     
     private void Victory()
     {
+        door.ForceOpen();
         sequenceOn = true; // Empêcher d'autres inputs
         activated = false; // Désactiver le jeu
         ToggleLight(0, true);
