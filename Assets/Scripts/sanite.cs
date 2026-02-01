@@ -43,20 +43,20 @@ public class sanite : MonoBehaviour
     public void IteractMask()
     {
         //shearch for all object with tag "Masked" and toggle their visibility
-        GameObject[] maskedObjects = GameObject.FindGameObjectsWithTag("Masked");
-        foreach (GameObject obj in maskedObjects) {
-            Renderer objRenderer = obj.GetComponent<Renderer>();
-            if (objRenderer != null) {
-                objRenderer.enabled = !objRenderer.enabled;
-            } else {
-                Light objLight = obj.GetComponent<Light>();
-                if (objLight != null)
-                {
-                    objLight.enabled = !objLight.enabled;
+        if (AsMask || SaniteLevel == 0) {
+            GameObject[] maskedObjects = GameObject.FindGameObjectsWithTag("Masked");
+            foreach (GameObject obj in maskedObjects) {
+                Renderer objRenderer = obj.GetComponent<Renderer>();
+                if (objRenderer != null) {
+                    objRenderer.enabled = !objRenderer.enabled;
+                } else {
+                    Light objLight = obj.GetComponent<Light>();
+                    if (objLight != null)
+                    {
+                        objLight.enabled = !objLight.enabled;
+                    }
                 }
             }
-        }
-        if (AsMask || SaniteLevel == 0) {
             AsMask = !AsMask;
             if (AsMask) {
                 embiance.SetMaskEmbient();
