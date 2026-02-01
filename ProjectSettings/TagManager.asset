@@ -12,6 +12,8 @@ TagManager:
   - Lever
   - FirstKey
   - Masked
+  - NPC
+  - Play
   layers:
   - Default
   - TransparentFX
