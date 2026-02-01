@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: contour_mirroir
-    second: {fileID: 2100000, guid: c6f37477e4d86ec49a67caa940ce9167, type: 2}
+      name: mirror_contour_mirroir
+    second: {fileID: 2100000, guid: 5e62824cebe7f534e8791b708fa49c61, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: mirroir
-    second: {fileID: 2100000, guid: f8447a0ec0a3488418d0d2291ba423f9, type: 2}
+      name: mirror_mirroir
+    second: {fileID: 2100000, guid: 529c0156c551d254987b4ddbc4f48b67, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
